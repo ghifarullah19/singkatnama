@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: limegreen;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container .title {
+  text-align: center;
+  text-transform: uppercase;
+  color: whitesmoke;
+  position: relative;
+}
+
+.container .title::before {
+  content: "";
+  width: 400px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+}
+
+.container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.container input {
+  color: gray;
+  padding-left: 10px;
+  width: 300px;
+  height: 50px;
+  background: lightgray;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.container input:focus {
+  color: black;
+  background: white;
+}
+
+.container .button-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+}
+
+.container button {
+  box-shadow: 1px 1px 5px 1px black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+
+.container button:active {
+  box-shadow: none;
+}
+
+.container .button-group .btn-ulang {
+  background-color: red;
+}
+
+.container .button-group .btn-kirim {
+  background-color: blue;
+}
+
+.container .kotak-hasil {
+  width: 400px;
+  height: 100px;
+  background: whitesmoke;
+  border: 2px solid green;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .kotak-hasil p {
+  font-size: 4em;
+}
+
+.container .copyright p {
+  color: rgb(85, 85, 85);
+  font-size: 1em;
+}
+
+.container .copyright p a {
+  text-decoration: none;
+  color: rgb(85, 85, 85);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  .container .title {
+    font-size: 0.8em;
+  }
+
+  .container .title::before {
+    bottom: -20px;
+    right: 0;
+    width: 100%;
+  }
+
+  .container .content .kotak-hasil,
+  .container .content input {
+    width: 70vw;
+  }
+
+  .container .content .kotak-hasil p {
+    font-size: 2.5em;
+  }
+}
