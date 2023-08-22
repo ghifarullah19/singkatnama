@@ -108,7 +108,12 @@ body {
 }
 
 .container .kotak-hasil p {
+  color: black;
   font-size: 4em;
+}
+
+.container .kotak-hasil p.reset-hasil {
+  color: gray;
 }
 
 .container .copyright p {
@@ -134,7 +139,7 @@ body {
   }
 
   .container .title::before {
-    bottom: 0;
+    bottom: -20px;
     right: 0;
     width: 100%;
   }

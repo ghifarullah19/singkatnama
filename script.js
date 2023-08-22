@@ -16,11 +16,18 @@ const input = document.querySelector(".container input");
 const button = document.querySelectorAll("button");
 const hasil = document.querySelector(".container .kotak-hasil p");
 
+
 button[1].addEventListener("click", function() {
-    hasil.innerHTML = abbrevName(input.value);
+    if (abbrevName(input.value) != 0) {
+        hasil.innerHTML = abbrevName(input.value);
+        hasil.classList.remove("reset-hasil");
+    } else {
+        alert("Silahkan masukan nama.");
+    }
 })
 
 button[0].addEventListener("click", function() {
-    hasil.innerHTML = "...";
+    hasil.innerHTML = "Hasil";
     input.value = null;
+    hasil.classList.add("reset-hasil");
 })
